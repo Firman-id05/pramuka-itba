@@ -181,7 +181,7 @@ header {
 .beranda {
   background: 
     linear-gradient(rgba(11, 60, 93, 0.7), rgba(11, 60, 93, 0.7)),
-    url("img/foto bersama.jpeg");
+    url("img/foto-bersama.jpeg");
   
   background-size: cover;
   background-position: center;
