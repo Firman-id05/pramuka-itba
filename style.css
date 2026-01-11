@@ -286,13 +286,71 @@ header {
   font-weight: 600;
 }
 
+/* =========================
+   PANEL 3 KOTAK MENEMPEL DI BAWAH HERO
+========================= */
+.beranda-panels {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: -45px;
+  transform: translateX(-50%);
+  width: min(1100px, calc(100% - 40px));
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.panel {
+  background: var(--biru);         /* khas kampus */
+  color: var(--putih);
+  text-decoration: none;
+  border-radius: 14px;
+  padding: 18px 18px;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  transition: 0.2s ease;
+  border: 2px solid rgba(243, 198, 35, 0.35); /* aksen kuning pramuka */
+}
+
+.panel:hover {
+  transform: translateY(-4px);
+  background: var(--coklat); /* pramuka */
+  border-color: var(--kuning);
+}
+
+.panel-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.panel h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--kuning);
+}
+
+.panel p {
+  font-size: 13px;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* Supaya section setelah beranda tidak ketutup panel */
+.berita, .section {
+  scroll-margin-top: 90px;
+}
+
 /* Responsive */
-@media (max-width: 768px) {
-  .beranda-content h1 {
-    font-size: 28px;
+@media (max-width: 900px) {
+  .beranda-content h1 { font-size: 32px; }
+  .beranda-panels {
+    grid-template-columns: 1fr;
+    bottom: -115px;
   }
-  .beranda-content p {
-    font-size: 16px;
+  .beranda-hero {
+    padding-bottom: 170px;
   }
 }
 
