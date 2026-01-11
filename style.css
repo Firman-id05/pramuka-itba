@@ -248,33 +248,118 @@ header {
 /* =========================
    BERANDA / HERO
 ========================= */
-.beranda {
-  background: url("img/foto-bersama.jpeg");
+/* =========================
+   BERANDA HERO (STYLE TEMPLATE)
+========================= */
+.beranda-hero {
+  position: relative;
+  min-height: 78vh;
+  background: url("img/foto-bersama.jpeg"); /* sesuaikan dengan nama file kamu */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: var(--putih);
-  padding: 90px 20px;
-  text-align: center;
-
-  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 80px 20px 120px; /* ruang bawah untuk panel */
 }
 
+/* overlay tipis agar teks jelas (bukan bayangan biru, netral) */
+.beranda-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* kalau mau benar-benar tanpa overlay: ubah jadi 0 */
+}
 
-
+.beranda-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--putih);
+  max-width: 900px;
+  padding: 10px 15px;
+}
 
 .beranda-content h1 {
-  font-size: 36px;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 1px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .beranda-content p {
   font-size: 18px;
+  font-weight: 600;
   opacity: 0.95;
+}
+
+/* =========================
+   PANEL 3 KOTAK MENEMPEL DI BAWAH HERO
+========================= */
+.beranda-panels {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: -45px;
+  transform: translateX(-50%);
+  width: min(1100px, calc(100% - 40px));
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.panel {
+  background: var(--biru);         /* khas kampus */
+  color: var(--putih);
+  text-decoration: none;
+  border-radius: 14px;
+  padding: 18px 18px;
+  text-align: center;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+  transition: 0.2s ease;
+  border: 2px solid rgba(243, 198, 35, 0.35); /* aksen kuning pramuka */
+}
+
+.panel:hover {
+  transform: translateY(-4px);
+  background: var(--coklat); /* pramuka */
+  border-color: var(--kuning);
+}
+
+.panel-icon {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.panel h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+  color: var(--kuning);
+}
+
+.panel p {
+  font-size: 13px;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* Supaya section setelah beranda tidak ketutup panel */
+.berita, .section {
+  scroll-margin-top: 90px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .beranda-content h1 { font-size: 32px; }
+  .beranda-panels {
+    grid-template-columns: 1fr;
+    bottom: -115px;
+  }
+  .beranda-hero {
+    padding-bottom: 170px;
+  }
 }
 
 /* =========================
