@@ -179,25 +179,21 @@ header {
    BERANDA / HERO
 ========================= */
 .beranda {
-  background: 
-    linear-gradient(rgba(11, 60, 93, 0.7), rgba(11, 60, 93, 0.7)),
-    url("img/foto-bersama.jpeg");
-  
+  background: url("img/foto-bersama.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  color: var();
+  color: var(--putih);
   padding: 90px 20px;
   text-align: center;
-}
 
-.beranda {
   min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 
 
