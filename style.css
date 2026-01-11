@@ -248,42 +248,49 @@ header {
 }
 
 /* =========================
-   BERANDA / HERO
-========================= */
-/* =========================
    BERANDA HERO (STYLE TEMPLATE)
 ========================= */
-/* =========================
-   BERANDA / HERO (SEMULA)
-========================= */
-.beranda {
-  background: url("img/foto-bersama.jpeg");
+.beranda-hero {
+  position: relative;
+  min-height: 78vh;
+  background: url("img/foto-bersama.jpeg"); /* sesuaikan dengan nama file kamu */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: var(--putih);
-  text-align: center;
-
-  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 80px 20px 120px; /* ruang bawah untuk panel */
+}
 
-  padding: 90px 20px;
+/* overlay tipis agar teks jelas (bukan bayangan biru, netral) */
+.beranda-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25); /* kalau mau benar-benar tanpa overlay: ubah jadi 0 */
+}
+
+.beranda-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: var(--putih);
+  max-width: 900px;
+  padding: 10px 15px;
 }
 
 .beranda-content h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 44px;
   font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 .beranda-content p {
   font-size: 18px;
-  opacity: 0.95;
   font-weight: 600;
+  opacity: 0.95;
 }
 
 /* =========================
