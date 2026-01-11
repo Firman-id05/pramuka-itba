@@ -30,8 +30,8 @@ body {
    TOP BAR
 ========================= */
 .top-bar {
-  background: var(--biru);
-  color: var(--putih);
+  background: var(--kuning);
+  color: var(--hitam);
   text-align: center;
   padding: 10px;
   font-size: 14px;
@@ -187,7 +187,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
 
-  color: var(--putih);
+  color: var();
   padding: 90px 20px;
   text-align: center;
 }
