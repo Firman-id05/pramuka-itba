@@ -487,6 +487,19 @@ header {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.grid-full {
+  grid-column: 1 / -1; /* ambil 1 baris penuh */
+  text-align: center;
+  margin-top: 30px;
+}
+
+
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
