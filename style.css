@@ -837,5 +837,31 @@ footer h3 {
   }
 }
 
+  /* =========================
+   PDF VIEWER
+========================= */
+.pdf-wrap {
+  width: 100%;
+  margin-top: 18px;
+  background: var(--putih);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.pdf-viewer {
+  width: 100%;
+  height: 80vh;
+  border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pdf-viewer {
+    height: 70vh;
+  }
+}
+
+
 
 
